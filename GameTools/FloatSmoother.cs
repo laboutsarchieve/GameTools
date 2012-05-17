@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using GameTools.Statistics;
+using GameTools.Statistical;
 
-namespace Warlord.GameTools
+namespace GameTools
 {
     public class FloatSmoother
     {

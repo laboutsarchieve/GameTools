@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="GameTools\Camera3D.cs" />
     <Compile Include="GameTools\Direction.cs" />
+    <Compile Include="GameTools\Events\BasicEventManager.cs" />
+    <Compile Include="GameTools\Events\BaseGameEvent.cs" />
+    <Compile Include="GameTools\Events\EventManager.cs" />
     <Compile Include="GameTools\FloatSmoother.cs" />
     <Compile Include="GameTools\Graph\GraphMath.cs" />
     <Compile Include="GameTools\Graph\Transformation.cs" />
@@ -55,7 +58,6 @@
     <Compile Include="GameTools\Noise2D\SimpleNoise2D.cs" />
     <Compile Include="GameTools\Noise3D\FastPerlinInterpolatedNoise3D.cs" />
     <Compile Include="GameTools\Noise3D\FastPerlinNoise3D.cs" />
-    <Compile Include="GameTools\Noise3D\PerlinNoise3D.cs" />
     <Compile Include="GameTools\Noise3D\PerlinNoiseSettings3D.cs" />
     <Compile Include="GameTools\Noise3D\SimpleNoise3D.cs" />
     <Compile Include="GameTools\Optional.cs" />
@@ -63,6 +65,7 @@
     <Compile Include="GameTools\Process\ProcessManager.cs" />
     <Compile Include="GameTools\Process\ThreadManager.cs" />
     <Compile Include="GameTools\Process\ThreadWrapper.cs" />
+    <Compile Include="GameTools\SortedMultiDictionary.cs" />
     <Compile Include="GameTools\SpiralProducer.cs" />
     <Compile Include="GameTools\State\NullState.cs" />
     <Compile Include="GameTools\State\State.cs" />

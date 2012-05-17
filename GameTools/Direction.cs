@@ -1,5 +1,4 @@
-﻿
-namespace GameTools
+﻿namespace GameTools
 {
     public enum Direction
     {

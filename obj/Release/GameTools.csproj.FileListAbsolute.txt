@@ -18,3 +18,8 @@ C:\Data\cSharp\Warlord pre-engine\GameTools\bin\Release\GameTools.pdb
 C:\Data\cSharp\Warlord pre-engine\GameTools\obj\Release\ResolveAssemblyReference.cache
 C:\Data\cSharp\Warlord pre-engine\GameTools\obj\Release\GameTools.dll
 C:\Data\cSharp\Warlord pre-engine\GameTools\obj\Release\GameTools.pdb
+Z:\Users\Labouts\Dropbox\Programming\C#\Libraries\GameTools\obj\Release\ResolveAssemblyReference.cache
+Z:\Users\Labouts\Dropbox\Programming\C#\Libraries\GameTools\obj\Release\GameTools.pdb
+Z:\Users\Labouts\Dropbox\Programming\C#\Libraries\GameTools\bin\Release\GameTools.dll
+Z:\Users\Labouts\Dropbox\Programming\C#\Libraries\GameTools\bin\Release\GameTools.pdb
+Z:\Users\Labouts\Dropbox\Programming\C#\Libraries\GameTools\obj\Release\GameTools.dll

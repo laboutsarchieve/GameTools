@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using GameTools.Statistics;
+using GameTools.Statistical;
 using Microsoft.Xna.Framework;
 
 namespace Warlord.GameTools

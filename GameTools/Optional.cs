@@ -1,5 +1,5 @@
 ﻿
-namespace Warlord.GameTools
+namespace GameTools
 {
     public struct Optional<T>
     {

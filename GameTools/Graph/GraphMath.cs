@@ -65,5 +65,13 @@ namespace GameTools.Graph
 
             return angle;
         }
+        public static Vector2 PointToVec( Point point )
+        {
+            return new Vector2(point.X, point.Y);
+        }
+        public static Point VecToPoint( Vector2 vector )
+        {
+            return new Point((int)vector.X, (int)vector.Y);
+        }
     }
 }

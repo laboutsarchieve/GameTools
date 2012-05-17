@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
 
-namespace GameTools.Statistics
+namespace GameTools.Statistical
 {
     class Statistics
     {

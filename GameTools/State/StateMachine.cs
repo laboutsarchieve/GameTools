@@ -38,7 +38,12 @@ namespace GameTools.State
             previousState.ExitState();
             currentState.EnterState();
         }
-
+        public void RevertState( )
+        {
+            State<OwnerType> holder = currentState;
+            currentState = previousState;
+            previousState = holder;
+        }
         public void Update()
         {
             globalState.Update();
