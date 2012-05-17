@@ -30,10 +30,6 @@ namespace GameTools.Noise3D
             int height = (int)settings.size.Y;
             int length = (int)settings.size.Z;
 
-            int effectiveX;
-            int effectiveY;
-            int effectiveZ;
-
             calcLookup = new Dictionary<Vector3, FastPerlinInterpolatedNoise3D>();
 
             for(int x = 0; x < 0 + width; x++)
@@ -42,9 +38,9 @@ namespace GameTools.Noise3D
                 {
                     for(int z = 0; z < 0 + length; z++)
                     {
-                        effectiveX = x + (int)settings.startingPoint.X;
-                        effectiveY = y + (int)settings.startingPoint.Y;
-                        effectiveZ = z + (int)settings.startingPoint.Z;
+                        int effectiveX = x + (int)settings.startingPoint.X;
+                        int effectiveY = y + (int)settings.startingPoint.Y;
+                        int effectiveZ = z + (int)settings.startingPoint.Z;
 
                         toFill[x * height * length + y * length + z] = GetPerlinNoise3D(effectiveX, effectiveY, effectiveZ);
                     }
@@ -140,10 +136,6 @@ namespace GameTools.Noise3D
             center = GetCenter(adjustedX, adjustedY, adjustedZ);
             sides = GetSides(adjustedX, adjustedY, adjustedZ);
             corners = GetCorners(adjustedX, adjustedY, adjustedZ);
-
-            Debug.Assert(Math.Abs(center) < 5 / 8.0);
-            Debug.Assert(Math.Abs(sides) < 1 / 4.0);
-            Debug.Assert(Math.Abs(corners) < 1 / 8.0);
 
             return corners + sides + center;
         }

@@ -29,17 +29,14 @@ namespace GameTools.Noise2D
             int width = (int)settings.size.X;
             int height = (int)settings.size.Y;
 
-            int effectiveX;
-            int effectiveY;
-
             calcLookup = new Dictionary<Vector2, FastPerlinInterpolatedNoise2D>();
 
             for(int x = 0; x < 0 + width; x++)
             {
                 for(int y = 0; y < 0 + height; y++)
                 {
-                    effectiveX = x + (int)settings.startingPoint.X;
-                    effectiveY = y + (int)settings.startingPoint.Y;
+                    int effectiveX = x + (int)settings.startingPoint.X;
+                    int effectiveY = y + (int)settings.startingPoint.Y;
 
                     toFill[x * height + y] = GetPerlinNoise3D(effectiveX, effectiveY);
                 }
@@ -152,4 +149,3 @@ namespace GameTools.Noise2D
         }
     }
 }
-
