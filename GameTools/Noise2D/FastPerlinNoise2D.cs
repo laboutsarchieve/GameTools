@@ -12,15 +12,16 @@ namespace GameTools.Noise2D
         private float[] flatPremutationList;
 
         private Random rng;
-
+        private int seed;
         private Dictionary<Vector2, FastPerlinInterpolatedNoise2D> calcLookup;
 
         private PerlinNoiseSettings2D settings;
 
-        public FastPerlinNoise2D(PerlinNoiseSettings2D settings)
+        public FastPerlinNoise2D(PerlinNoiseSettings2D settings, int seed)
         {
             this.settings = settings;
-            rng = new Random(settings.seed);
+            this.seed = seed;
+            rng = new Random(seed);
 
             populatePremutations();
         }
@@ -143,7 +144,7 @@ namespace GameTools.Noise2D
                 for(int y = 0; y < premutationSize; y++)
                 {
                     index = x * premutationSize + y;
-                    flatPremutationList[index] = SimpleNoise2D.GenFloatNoise(rng.Next(), rng.Next(), settings.seed);
+                    flatPremutationList[index] = SimpleNoise2D.GenFloatNoise(rng.Next(), rng.Next(), seed);
                 }
             }
         }
