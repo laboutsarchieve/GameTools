@@ -10,17 +10,26 @@ namespace GameTools.Noise3D
     {
         private const int premutationSize = 100;
         private float[] flatPremutationList;
+        int seed; 
 
         private Random rng;
-
         private Dictionary<Vector3, FastPerlinInterpolatedNoise3D> calcLookup;
-
         private PerlinNoiseSettings3D settings;        
 
-        public FastPerlinNoise3D(PerlinNoiseSettings3D settings)
+        public FastPerlinNoise3D(PerlinNoiseSettings3D settings, int seed)
         {
             this.settings = settings;
-            rng = new Random(settings.seed);
+            this.seed = seed;
+            rng = new Random();
+
+            populatePremutations();
+        }
+        public FastPerlinNoise3D(PerlinNoiseSettings3D settings)
+        {
+            this.settings = settings;            
+            
+            rng = new Random();
+            seed = rng.Next( );      
 
             populatePremutations();
         }
@@ -186,7 +195,7 @@ namespace GameTools.Noise3D
                     for(int z = 0; z < premutationSize; z++)
                     {
                         index = x * premutationSize * premutationSize + y * premutationSize + z;
-                        flatPremutationList[index] = SimpleNoise3D.GenFloatNoise(rng.Next(), rng.Next(), rng.Next(), settings.seed);
+                        flatPremutationList[index] = SimpleNoise3D.GenFloatNoise(rng.Next(), rng.Next(), rng.Next(), seed);
                     }
                 }
             }

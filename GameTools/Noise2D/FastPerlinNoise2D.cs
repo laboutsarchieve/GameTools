@@ -21,7 +21,15 @@ namespace GameTools.Noise2D
         {
             this.settings = settings;
             this.seed = seed;
-            rng = new Random(seed);
+            rng = new Random();
+
+            populatePremutations();
+        }
+        public FastPerlinNoise2D(PerlinNoiseSettings2D settings)
+        {
+            this.settings = settings;            
+            rng = new Random();
+            this.seed = rng.Next( );
 
             populatePremutations();
         }

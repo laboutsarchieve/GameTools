@@ -15,7 +15,6 @@ namespace GameTools.Noise3D
         public float persistence;
         public float zoom;
         public int octaves;
-        public int seed;
 
         public PerlinNoiseSettings3D()
         {
@@ -28,9 +27,6 @@ namespace GameTools.Noise3D
             persistence = 0.5f;
             zoom = 40;
             octaves = 6;
-            seed = 0;
-
-            GenerateNewSeed();
         }
 
         public PerlinNoiseSettings3D(PerlinNoiseSettings3D settings)
@@ -42,13 +38,6 @@ namespace GameTools.Noise3D
             persistence = settings.persistence;
             zoom = settings.zoom;
             octaves = settings.octaves;
-            seed = settings.seed;
         }
-
-        public void GenerateNewSeed()
-        {
-            seed = rng.Next();
-        }
-
     }
 }
